@@ -37,7 +37,8 @@ module "web-sg" {
   depends_on = [
     module.db-sg
   ]
-  source = "../.."
+  source  = "so1omon563/security-group/aws"
+  version = "1.0.0"
 
   name        = var.name
   vpc_id      = module.vpc.vpc_id
@@ -118,7 +119,8 @@ output "web-sg" {
 }
 
 module "db-sg" {
-  source = "../.."
+  source  = "so1omon563/security-group/aws"
+  version = "1.0.0"
 
   name        = var.name
   vpc_id      = module.vpc.vpc_id

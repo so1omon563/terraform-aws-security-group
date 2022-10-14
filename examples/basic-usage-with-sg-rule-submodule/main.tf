@@ -34,7 +34,8 @@ module "vpc" {
 ## Security Group creation
 
 module "web-sg" {
-  source = "../.."
+  source  = "so1omon563/security-group/aws"
+  version = "1.0.0"
 
   name        = var.name
   vpc_id      = module.vpc.vpc_id
@@ -48,7 +49,8 @@ output "web-sg" {
 }
 
 module "db-sg" {
-  source = "../.."
+  source  = "so1omon563/security-group/aws"
+  version = "1.0.0"
 
   name        = var.name
   vpc_id      = module.vpc.vpc_id
@@ -68,8 +70,8 @@ module "web-rules" {
     module.web-sg
   ]
   for_each = toset(["80", "443"])
-  source   = "../..//modules/basic_security_group_rule"
-
+  source   = "so1omon563/security-group/aws//modules/basic_security_group_rule"
+  version  = "1.0.0"
 
   from_port         = each.key
   protocol          = "TCP"
@@ -86,7 +88,8 @@ module "web-to-db" {
     module.web-sg,
     module.db-sg
   ]
-  source = "../..//modules/basic_security_group_rule"
+  source  = "so1omon563/security-group/aws//modules/basic_security_group_rule"
+  version = "1.0.0"
 
   from_port                = 3306
   protocol                 = "TCP"
@@ -101,7 +104,8 @@ module "web-self" {
   depends_on = [
     module.web-sg
   ]
-  source = "../..//modules/basic_security_group_rule"
+  source  = "so1omon563/security-group/aws//modules/basic_security_group_rule"
+  version = "1.0.0"
 
   from_port         = 0
   protocol          = "-1"
@@ -117,7 +121,8 @@ module "db-self" {
   depends_on = [
     module.db-sg
   ]
-  source = "../..//modules/basic_security_group_rule"
+  source  = "so1omon563/security-group/aws//modules/basic_security_group_rule"
+  version = "1.0.0"
 
   from_port         = 0
   protocol          = "-1"
@@ -133,7 +138,8 @@ module "web-egress-ephemeral" {
   depends_on = [
     module.web-sg
   ]
-  source = "../..//modules/basic_security_group_rule"
+  source  = "so1omon563/security-group/aws//modules/basic_security_group_rule"
+  version = "1.0.0"
 
   from_port         = 1024
   protocol          = "TCP"
@@ -148,7 +154,8 @@ module "db-egress-ephemeral" {
   depends_on = [
     module.db-sg
   ]
-  source = "../..//modules/basic_security_group_rule"
+  source  = "so1omon563/security-group/aws//modules/basic_security_group_rule"
+  version = "1.0.0"
 
   from_port         = 1024
   protocol          = "TCP"

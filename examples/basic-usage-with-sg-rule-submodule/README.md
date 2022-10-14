@@ -16,15 +16,15 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_db-egress-ephemeral"></a> [db-egress-ephemeral](#module\_db-egress-ephemeral) | ../..//modules/basic_security_group_rule | n/a |
-| <a name="module_db-self"></a> [db-self](#module\_db-self) | ../..//modules/basic_security_group_rule | n/a |
-| <a name="module_db-sg"></a> [db-sg](#module\_db-sg) | ../.. | n/a |
+| <a name="module_db-egress-ephemeral"></a> [db-egress-ephemeral](#module\_db-egress-ephemeral) | so1omon563/security-group/aws//modules/basic_security_group_rule | 1.0.0 |
+| <a name="module_db-self"></a> [db-self](#module\_db-self) | so1omon563/security-group/aws//modules/basic_security_group_rule | 1.0.0 |
+| <a name="module_db-sg"></a> [db-sg](#module\_db-sg) | so1omon563/security-group/aws | 1.0.0 |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | so1omon563/vpc/aws | 1.0.0 |
-| <a name="module_web-egress-ephemeral"></a> [web-egress-ephemeral](#module\_web-egress-ephemeral) | ../..//modules/basic_security_group_rule | n/a |
-| <a name="module_web-rules"></a> [web-rules](#module\_web-rules) | ../..//modules/basic_security_group_rule | n/a |
-| <a name="module_web-self"></a> [web-self](#module\_web-self) | ../..//modules/basic_security_group_rule | n/a |
-| <a name="module_web-sg"></a> [web-sg](#module\_web-sg) | ../.. | n/a |
-| <a name="module_web-to-db"></a> [web-to-db](#module\_web-to-db) | ../..//modules/basic_security_group_rule | n/a |
+| <a name="module_web-egress-ephemeral"></a> [web-egress-ephemeral](#module\_web-egress-ephemeral) | so1omon563/security-group/aws//modules/basic_security_group_rule | 1.0.0 |
+| <a name="module_web-rules"></a> [web-rules](#module\_web-rules) | so1omon563/security-group/aws//modules/basic_security_group_rule | 1.0.0 |
+| <a name="module_web-self"></a> [web-self](#module\_web-self) | so1omon563/security-group/aws//modules/basic_security_group_rule | 1.0.0 |
+| <a name="module_web-sg"></a> [web-sg](#module\_web-sg) | so1omon563/security-group/aws | 1.0.0 |
+| <a name="module_web-to-db"></a> [web-to-db](#module\_web-to-db) | so1omon563/security-group/aws//modules/basic_security_group_rule | 1.0.0 |
 
 ## Resources
 
