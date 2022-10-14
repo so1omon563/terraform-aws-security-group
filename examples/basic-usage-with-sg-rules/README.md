@@ -16,9 +16,9 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_db-sg"></a> [db-sg](#module\_db-sg) | ../.. | n/a |
+| <a name="module_db-sg"></a> [db-sg](#module\_db-sg) | so1omon563/security-group/aws | 1.0.0 |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | so1omon563/vpc/aws | 1.0.0 |
-| <a name="module_web-sg"></a> [web-sg](#module\_web-sg) | ../.. | n/a |
+| <a name="module_web-sg"></a> [web-sg](#module\_web-sg) | so1omon563/security-group/aws | 1.0.0 |
 
 ## Resources
 
