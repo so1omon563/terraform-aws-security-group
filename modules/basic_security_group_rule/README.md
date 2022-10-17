@@ -1,6 +1,6 @@
 # Basic Security Group Rule
 
-A module to create an individual security group rule. Can be easily iterated across using `for_each`. Examples of this can be found in the [examples](../../examples) directory.
+A module to create an individual security group rule. Can be easily iterated across using `for_each`.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 Auto-generated technical documentation is created using [`terraform-docs`](https://terraform-docs.io/)
@@ -59,6 +59,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_security_group_rule"></a> [security\_group\_rule](#output\_security\_group\_rule) | Collection of outputs for the security group rule |
-
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
