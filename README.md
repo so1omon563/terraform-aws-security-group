@@ -11,7 +11,7 @@ Auto-generated technical documentation is created using [`terraform-docs`](https
 ## Examples
 
 ```hcl
-# See examples under the examples directory for more information on how to use this module.
+# See examples under the top level examples directory for more information on how to use this module.
 ```
 
 ## Requirements
