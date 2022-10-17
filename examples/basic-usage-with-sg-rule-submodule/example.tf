@@ -1,3 +1,5 @@
+# Basic usage with the Security Group rule submodule.
+
 provider "aws" {
   default_tags {
     tags = {

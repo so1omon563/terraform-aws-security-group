@@ -5,7 +5,14 @@ A module to create a security group. Please note that this creates no rules. Rul
 Examples for use can be found under the [examples](examples) directory.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 Auto-generated technical documentation is created using [`terraform-docs`](https://terraform-docs.io/)
+
+## Examples
+
+```hcl
+# See examples under the examples directory for more information on how to use this module.
+```
 
 ## Requirements
 
@@ -50,4 +57,6 @@ Auto-generated technical documentation is created using [`terraform-docs`](https
 |------|-------------|
 | <a name="output_security-group"></a> [security-group](#output\_security-group) | Collection of outputs for the security group |
 | <a name="output_sg-rules"></a> [sg-rules](#output\_sg-rules) | Collection of outputs for any security group rules that are created by this module. |
+
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
