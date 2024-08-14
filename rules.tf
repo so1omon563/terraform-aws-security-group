@@ -13,5 +13,6 @@ module "sg-rules" {
   ipv6_cidr_blocks         = each.value.ipv6_cidr_blocks
   prefix_list_ids          = each.value.prefix_list_ids
   source_security_group_id = each.value.source_security_group_id
+  self                     = each.value.self
 
 }
