@@ -1,5 +1,21 @@
-variable "name" {}
-variable "tags" {}
+terraform {
+  required_version = ">= 0.14"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.21, < 6.0"
+    }
+  }
+}
+
+variable "name" {
+  type = string
+}
+
+variable "tags" {
+  type = map(string)
+}
 
 module "vpc" {
   source  = "so1omon563/vpc/aws"

@@ -1,13 +1,1 @@
-# Standalone examples and fixtures inherit compatibility from the module.
-rule "terraform_required_providers" {
-  enabled = false
-}
-
-rule "terraform_required_version" {
-  enabled = false
-}
-
-# Fixture variable typing is tracked separately from lint tooling.
-rule "terraform_typed_variables" {
-  enabled = false
-}
+# Repository-wide TFLint configuration.

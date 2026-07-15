@@ -6,11 +6,21 @@ Example shows using Default Tags in the provider as well as passing additional t
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
-
 ## Examples
 
 ```hcl
 # Basic usage with the Security Group rules
+
+terraform {
+  required_version = ">= 0.14"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.21, < 6.0"
+    }
+  }
+}
 
 provider "aws" {
   default_tags {
@@ -178,7 +188,10 @@ output "db-sg" {
 
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.21, < 6.0 |
 
 ## Providers
 

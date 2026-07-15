@@ -1,5 +1,16 @@
 # Basic usage with the Security Group rules
 
+terraform {
+  required_version = ">= 0.14"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.21, < 6.0"
+    }
+  }
+}
+
 provider "aws" {
   default_tags {
     tags = {
