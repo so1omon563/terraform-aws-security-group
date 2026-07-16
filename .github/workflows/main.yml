@@ -8,7 +8,6 @@ on:
       - closed
 
 permissions:
-  actions: read
   contents: write
 
 jobs:
@@ -16,23 +15,6 @@ jobs:
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for earlier release runs
-        env:
-          GH_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          while :; do
-            earlier_runs="$(
-              gh run list --workflow "${GITHUB_WORKFLOW}" --limit 100 \
-                --json databaseId,status \
-                --jq ".[] | select(.databaseId < ${GITHUB_RUN_ID} and (.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\" or .status == \"requested\")) | .databaseId"
-            )"
-            if [[ -z "${earlier_runs}" ]]; then
-              break
-            fi
-            sleep 10
-          done
-
       - name: Bump version and push tag
         id: version
         uses: so1omon563/custom-semver-bumper@v1
