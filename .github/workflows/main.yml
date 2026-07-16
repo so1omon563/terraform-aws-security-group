@@ -18,6 +18,7 @@ jobs:
     steps:
       - name: Wait for earlier release runs
         env:
+          GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           while :; do
